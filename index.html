@@ -11,6 +11,26 @@
 	<meta name="viewport" content="width=device-width"/>
 	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" />
+
+	<style type="text/css">
+		.isotope_w1_h2, .isotope_w1_h1 {
+			width: 160px;
+		}
+
+		.isotope_w1_h1 {
+			height: 160px;
+		}
+		
+		.isotope_w1_h2 {
+			height: 320px;
+		}
+
+		.referenceItems{
+			background-repeat:no-repeat;
+			background-size: contain;
+			display: block;
+		}
+	</style>
 </head>
 <body ng-app="laszlovector">
 	<!-- Menu start -->
@@ -47,8 +67,8 @@
 	<!-- Menu end -->
 	<!-- Thumbnails start -->
 	<div class="row referenceList" ng-controller="referenceList">
-		<div ng-repeat="reference in references" class="referenceItems">
-			<img src="{{reference.thumbnailImg}}" alt="{{reference.description}}" />
+		<div ng-repeat="reference in references" class="referenceItems {{reference.cssClass}}" style="background-image: url({{reference.thumbnailImg}});">
+			<!--<img src="{{reference.thumbnailImg}}" alt="{{reference.description}}" />-->
 		</div>
 	</div>
 	<!-- Thumbnails end -->
