@@ -7,15 +7,13 @@ var laszlovector = angular.module('laszlovector', [])
 
 		$scope.setIsotope = function(){
 			var iso = new Isotope('.referenceList',{
-				/*
 				masonry: {
-					isFitWidth: true
-				} */
+					columnWidth : 160
+				},
 				itemSelector:'.referenceItems',
 				layoutMode:'masonry',
 				resizesContainer:true,
-				animationEngine:'jQuery',
-				sort:''
+				animationEngine:'jQuery'
 			});
 		};
 
