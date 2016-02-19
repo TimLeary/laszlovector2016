@@ -11,10 +11,11 @@
 	<meta name="viewport" content="width=device-width"/>
 	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" />
+	<link rel="stylesheet" type="text/css" href="bower_components/lightbox2/src/css/lightbox.css">
 
 	<style type="text/css">
 		.isotope_w1_h2, .isotope_w1_h1 {
-			width: 160px;
+			width: 280px;
 		}
 
 		.isotope_w1_h1 {
@@ -22,7 +23,7 @@
 		}
 		
 		.isotope_w1_h2 {
-			height: 320px;
+			height: 330px;
 		}
 
 		.referenceItems{
@@ -66,9 +67,12 @@
 	</nav>
 	<!-- Menu end -->
 	<!-- Thumbnails start -->
-	<div class="row referenceList" ng-controller="referenceList">
-		<div ng-repeat="reference in references" class="referenceItems {{reference.cssClass}}" style="background-image: url({{reference.thumbnailImg}});">
-			<!--<img src="{{reference.thumbnailImg}}" alt="{{reference.description}}" />-->
+	<div class="referenceList" ng-controller="referenceList">
+	    <section class="container" data-iso-repeat="references"></section>
+		<div ng-repeat="reference in references">
+			<a ng-class="lightboxHide($index)" ng-repeat="image in reference.images" href="{{image}}" data-lightbox="{{reference.cssClass}}" data-title="{{reference.description}}" after-render iso-repeat class="referenceItems {{reference.cssClass}}" style="background-image: url({{reference.thumbnailImg}});"></a>
+			<!-- <div ng-repeat="reference in references" after-render class="referenceItems {{reference.cssClass}}" style="background-image: url({{reference.thumbnailImg}});"> -->
+				<!--<img src="{{reference.thumbnailImg}}" alt="{{reference.description}}" />-->
 		</div>
 	</div>
 	<!-- Thumbnails end -->
@@ -77,6 +81,7 @@
 	<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
 	<script type="text/javascript" src="bower_components/isotope/dist/isotope.pkgd.min.js"></script>
+	<script type="text/javascript" src="bower_components/lightbox2/src/js/lightbox.js"></script>
 	<script type="text/javascript" src="scripts/app.js"></script>
 </body>
 </html>
