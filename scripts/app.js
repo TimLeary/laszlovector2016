@@ -32,13 +32,16 @@ var laszlovector = angular.module('laszlovector', [])
 						animationEngine:'jQuery',
 						filter: '*'
 					});
+                                        
+                                        //$('.swipebox').swipebox();
+                                        
 				    window.lightbox.option({
 				      'resizeDuration': 200,
 				      'wrapAround': true
 				    });
-					clearInterval(window.isotopeTimer);
+					clearInterval(window.isotopeTimer); 
 				}, 50);
 			}
 		  }
-		}
+		};
 	});

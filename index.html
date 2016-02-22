@@ -11,6 +11,7 @@
 	<meta name="viewport" content="width=device-width"/>
 	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" />
+        <!--<link rel="stylesheet" type="text/css" href="bower_components/swipebox/src/css/swipebox.css">-->
 	<link rel="stylesheet" type="text/css" href="bower_components/lightbox2/src/css/lightbox.css">
 
 	<style type="text/css">
@@ -70,7 +71,8 @@
 	<div class="referenceList" ng-controller="referenceList">
 	    <section class="container" data-iso-repeat="references"></section>
 		<div ng-repeat="reference in references">
-			<a ng-class="lightboxHide($index)" ng-repeat="image in reference.images" href="{{image}}" data-lightbox="{{reference.cssClass}}" data-title="{{reference.description}}" after-render iso-repeat class="referenceItems {{reference.cssClass}}" style="background-image: url({{reference.thumbnailImg}});"></a>
+                    <a ng-if="reference.showDescription" ng-class="lightboxHide($index)" href="{{ reference.images[0] }}" data-lightbox="{{reference.cssClass}}" after-render iso-repeat class="referenceItems {{reference.cssClass}} swipebox" style="background-image: url({{reference.thumbnailImg}});"></a>
+			<a ng-class="lightboxHide($index)" ng-repeat="image in reference.images" href="{{image}}" data-lightbox="{{reference.cssClass}}" data-title="{{reference.title}}" after-render iso-repeat class="referenceItems {{reference.cssClass}} swipebox" style="background-image: url({{reference.thumbnailImg}});"></a>
 			<!-- <div ng-repeat="reference in references" after-render class="referenceItems {{reference.cssClass}}" style="background-image: url({{reference.thumbnailImg}});"> -->
 				<!--<img src="{{reference.thumbnailImg}}" alt="{{reference.description}}" />-->
 		</div>
@@ -81,6 +83,7 @@
 	<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
 	<script type="text/javascript" src="bower_components/isotope/dist/isotope.pkgd.min.js"></script>
+	<!--<script type="text/javascript" src="bower_components/swipebox/src/js/jquery.swipebox.js"></script>-->
 	<script type="text/javascript" src="bower_components/lightbox2/src/js/lightbox.js"></script>
 	<script type="text/javascript" src="scripts/app.js"></script>
 </body>
