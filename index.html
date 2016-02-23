@@ -76,8 +76,7 @@
             <a ng-if="reference.showDescription"
                ng-class="lightboxHide($index)"
                href="{{ reference.images[0] }}"
-               data-lightbox="{{reference.cssClass}}"
-               data-fancybox-group="{{reference.cssClass}}"
+               data-fancybox-group="fancyGroup"
                after-render
                iso-repeat
                title="{{reference.title}}"
@@ -88,8 +87,7 @@
                ng-if="reference.images[0] != images"
                ng-class="lightboxHide($index)"
                href="{{image}}"
-               data-lightbox="{{reference.cssClass}}"
-               data-fancybox-group="{{reference.cssClass}}"
+               data-fancybox-group="fancyGroup"
                after-render
                iso-repeat
                title="{{reference.title}}"
