@@ -1,11 +1,11 @@
-var laszlovector = angular.module('laszlovector', [])
+var laszlovector = angular.module('laszlovector', ['ngSanitize'])
 	.controller('referenceList', function ($scope) {
 	    $scope.init = function () {
 	        $scope.references = laszlovectorElements;
 	    };
 
-	    $scope.lightboxHide = function (index) {
-	        if (index != 0) {
+	    $scope.lightboxHide = function (index,showDescription) {
+	        if (index != 0 || showDescription == true) {
 	            return 'hide';
 	        } else {
 	            return '';
@@ -38,9 +38,10 @@ var laszlovector = angular.module('laszlovector', [])
 	                        closeEffect: 'elastic',
 	                        closeSpeed: 150,
 
-	                        closeClick: true,
+	                        closeClick: true
 	                    });
 
+                            
 	                    clearTimeout(window.isotopeTimer);
 	                }, 500);
 	            }

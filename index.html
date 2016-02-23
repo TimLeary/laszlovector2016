@@ -74,8 +74,8 @@
         <section class="container" data-iso-repeat="references"></section>
         <div ng-repeat="reference in references">
             <a ng-if="reference.showDescription"
-               ng-class="lightboxHide($index)"
-               href="{{ reference.images[0] }}"
+               ng-class="_lightboxHide($index)"
+               href="#{{reference.title}}"
                data-fancybox-group="fancyGroup"
                after-render
                iso-repeat
@@ -83,9 +83,13 @@
                class="referenceItems {{reference.cssClass}} swipebox fancybox"
                style="background-image: url({{reference.thumbnailImg}});">
             </a>
+            <div id="{{reference.title}}" style="display:none;">
+                <span ng-bind-html="reference.description"></span>
+            </div>
+            
             <a ng-repeat="image in reference.images"
                ng-if="reference.images[0] != images"
-               ng-class="lightboxHide($index)"
+               ng-class="lightboxHide($index, reference.showDescription)"
                href="{{image}}"
                data-fancybox-group="fancyGroup"
                after-render
@@ -102,7 +106,8 @@
     <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
     <script type="text/javascript" src="bower_components/isotope/dist/isotope.pkgd.min.js"></script>
-
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-sanitize.min.js"></script>
+    
     <!-- Add mousewheel plugin (this is optional) -->
     <script type="text/javascript" src="bower_components/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
     <!-- Add fancyBox main JS and CSS files -->

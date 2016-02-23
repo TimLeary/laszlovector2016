@@ -7,7 +7,7 @@ var laszlovectorElements =
 		    link: '',
 		    images: ["../images/Beugro_Logo _a_MockUp_1.jpg", "../images/Beugro_Logo_b_v3_MockUp_1.jpg"],
 		    showDescription: true,
-		    description: '<h2>Be kő ugrani</h2>'
+		    description: '<h2 class="klassz">Be kő ugrani</h2>'
 		},
 		{
 		    thumbnailImg: "../images/ref_280x330_consider_invest.jpg",
