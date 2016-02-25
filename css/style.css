@@ -1,0 +1,30 @@
+.isotope_w1_h2, .isotope_w1_h1 {
+    width: 280px;
+}
+
+.isotope_w1_h1 {
+    height: 160px;
+}
+
+.isotope_w1_h2 {
+    height: 330px;
+}
+
+.referenceItems {
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.referenceItems:hover {
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
