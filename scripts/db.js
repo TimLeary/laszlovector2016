@@ -7,7 +7,7 @@ var laszlovectorElements =
 		    link: '',
 		    images: ["../images/Beugro_Logo _a_MockUp_1.jpg", "../images/Beugro_Logo_b_v3_MockUp_1.jpg"],
 		    showDescription: true,
-		    description: '<h2 class="klassz">Be kő ugrani</h2>'
+		    description: '<h4 class="klassz">Leiras a cuccokrol hosszabban meg blabla</h4>'
 		},
 		{
 		    thumbnailImg: "../images/ref_280x330_consider_invest.jpg",
@@ -23,9 +23,9 @@ var laszlovectorElements =
 		    title: 'Europa',
 		    cssClass: 'isotope_w1_h1',
 		    link: '',
-		    images: ["../images/ref_280x160_europa.jpg", "../images/ke_press_127x44_pre.jpg"],
+		    images: ["../images/ke_press_127x44_pre.jpg"],
 		    showDescription: true,
-		    description: ''
+		    description: '<h4 class="klassz">Leiras a cuccokrol hosszabban meg blabla es meg tobb blabla</h4>'
 		},
 		{
 		    thumbnailImg: "../images/ref_280x160_interactive.jpg",
@@ -34,7 +34,7 @@ var laszlovectorElements =
 		    link: '',
 		    images: ["../images/bx_a__logo.jpg"],
 		    showDescription: false,
-		    description: ''
+		    description: '<h4 class="klassz">blabla es megint blabla</h4>'
 		},
 		{
 		    thumbnailImg: "../images/ref_280x330_iport.jpg",
@@ -50,7 +50,7 @@ var laszlovectorElements =
 		    title: 'logo',
 		    cssClass: 'isotope_w1_h1',
 		    link: '',
-		    images: ["../images/ref_280x160_logo.jpg", "../images/gazdagreti_logok.jpg"],
+		    images: ["../images/gazdagreti_logok.jpg"],
 		    showDescription: false,
 		    description: ''
 		},
