@@ -14,7 +14,7 @@ var laszlovectorElements =
 		    title: 'Beugros',
 		    cssClass: 'isotope_w1_h2',
 		    link: '',
-		    images: ["../images/beugros_01.jpg", "../images/beugros_02.jpg","../images/beugros_03.jpg","../images/beugros_04.jpg","../images/beugros_05.jpg","../images/beugros_06.jpg","../images/beugros_07.jpg","../images/beugros_01.jpg"],
+		    images: ["../images/beugros_01.jpg", "../images/beugros_02.jpg","../images/beugros_03.jpg","../images/beugros_04.jpg","../images/beugros_05.jpg","../images/beugros_06.jpg","../images/beugros_07.jpg"],
 		    showDescription: true,
 		    description: '<h4 class="klassz">Leiras a cuccokrol hosszabban meg blabla</h4>'
 		},

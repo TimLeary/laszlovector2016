@@ -65,6 +65,14 @@ var laszlovector = angular.module('laszlovector', ['ngSanitize'])
 						//iso.on( 'layoutComplete',  scope.layoutComplete);
 
 	                    $('.thumnails').fancybox({
+                            beforeShow : function(){
+                                this.title = $(this.element).data("description");
+                            },
+                            helpers     : {
+                                title: {
+                                    type: 'inside'
+                                }
+                            },
 	                        padding: 0,
 
 	                        openEffect: 'elastic',
