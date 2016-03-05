@@ -81,6 +81,12 @@ var laszlovector = angular.module('laszlovector', ['ngSanitize'])
 	                        closeEffect: 'elastic',
 	                        closeSpeed: 150,
 
+	                        scrolling: 'visible',
+	                        autoHeight: false,
+	                        autoWidth: true,
+	                        maxWidth: '95%',
+	                        fitToView: false,
+
 	                        closeClick: true
 	                    });
 
